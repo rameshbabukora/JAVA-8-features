@@ -1,16 +1,18 @@
-import SRC.MyInterface;
-import SRC.Student;
+import OOPS.MyInterface;
+import OOPS.Student;
 
 public class HelloWorld implements MyInterface {
     public static void main(String[] args) {
+        System.out.println("hello");
+
         HelloWorld h = new HelloWorld();
         h.m1();
         int a = h.m2("ramesh");
-
-        System.out.println("hello");
         System.out.println(a);
+
         Student s1 = new Student(101, "ramesh");
         System.out.println(s1.getId() + "+" + s1.getName());
+
         Student b = h.m3(102, "rk");
         System.out.println(b.getId() + "--" + b.getName());
 

@@ -1,4 +1,4 @@
-package SRC;
+package OOPS;
 
 public interface MyInterface {
     void m1();//by default it will be like :public abstract void m1()
