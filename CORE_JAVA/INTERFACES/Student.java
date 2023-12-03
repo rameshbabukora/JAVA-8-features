@@ -1,4 +1,4 @@
-package OOPS;
+package CORE_JAVA.INTERFACES;
 
 import java.util.HashMap;
 

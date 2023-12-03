@@ -1,5 +1,4 @@
-import OOPS.MyInterface;
-import OOPS.Student;
+package CORE_JAVA.INTERFACES;
 
 public class HelloWorld implements MyInterface {
     public static void main(String[] args) {
