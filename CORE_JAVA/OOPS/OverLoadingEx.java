@@ -26,3 +26,7 @@ public class OverLoadingEx {
 
     }
 }
+
+//In overloading compiler is responsible to perform method resolution(decision) based on
+//        the reference type. Hence overloading is also considered as compile time
+//        polymorphism(or) static ()early biding.
