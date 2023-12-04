@@ -29,11 +29,7 @@ public class Student {
 
     public static void main(String[] args) {
         System.out.println("Student main method");
-        HashMap map=new HashMap();
-        map.put(1,"ravi");
-        map.put(2,"raja");
-        map.put(3,"rk");
-        System.out.println(map);
+
 
     }
 
