@@ -3,6 +3,7 @@ package CORE_JAVA.JAVA_8_FEATURES;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Employee {
@@ -90,24 +91,39 @@ public class Employee {
         employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 
         //1.Find out the count of male and female employees present in the organization?
-        Map<String, Long> noOfMaleAndFeamale = employeeList
+        /*Map<String, Long> noOfMaleAndFeamale = employeeList
                 .stream()
                 .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
-        System.out.println(noOfMaleAndFeamale);
+        System.out.println(noOfMaleAndFeamale);*/
 
         //2.Which employee getting more than 15000 salary
-        employeeList.stream()
+        /*employeeList.stream()
                 .filter(e -> e.salary >= 15000)
                 .map(e -> e.getName())
                 .collect(Collectors.toList())
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
 
 
         //3.Write a program to print the names of all departments in the organization
-        employeeList.stream()
+        /*employeeList.stream()
                 .map(Employee::getDepartment)
                 .distinct()
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
+
+        /* 4.key is name value should be student object
+
+        student list to hash map object:*/
+
+        /*Map<String, Employee> map = employeeList.stream()
+                .collect(Collectors
+                        .toMap(e -> e.getName(), Function.identity()));
+
+        System.out.println(map);
+
+        Map<String, Employee> mapemp = employeeList.stream().collect(Collectors.toMap(e->e.getName(), e->e));
+        System.out.println(mapemp);*/
+
+        employeeList.stream().filter(e->e.getSalary()>35000).map(e->e.getName()).collect(Collectors.toList()).forEach(System.out::println);
     }
 
 
