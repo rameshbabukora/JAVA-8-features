@@ -123,7 +123,12 @@ public class Employee {
         Map<String, Employee> mapemp = employeeList.stream().collect(Collectors.toMap(e->e.getName(), e->e));
         System.out.println(mapemp);*/
 
-        employeeList.stream().filter(e->e.getSalary()>35000).map(e->e.getName()).collect(Collectors.toList()).forEach(System.out::println);
+        employeeList
+                .stream()
+                .filter(e -> e.getSalary() > 35000)
+                .map(e -> e.getName())
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
 
